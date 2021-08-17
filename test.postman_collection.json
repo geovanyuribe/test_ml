@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "65189daf-9a69-41f3-b039-19898d1bf08d",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test_cluster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"DaysRegistered\":[10,3500], \"Income\":[1000.2,93200.32], \"Recency\":[1,22], \"AcceptedCmpAll\":[4,5], \"MntTotal\":[1800,1900]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/cluster",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"DaysRegistered\":[10,3500], \"Income\":[1000.2,93200.32], \"Recency\":[1,22], \"AcceptedCmpAll\":[2,5], \"MntTotal\":[100,1900]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/predict",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
